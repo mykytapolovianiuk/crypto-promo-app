@@ -62,7 +62,7 @@ const WelcomePage = () => {
                 </div>
 
                 <div className="header_text-section">
-                    <h1 className="title">TRON (TRX) <span>AIRDROP</span></h1>
+                    <h1 className="title">CRYPTO (CON) <span>AIRDROP</span></h1>
                     <p className="subtitle">Reward for Supporting the Network During Market Instability</p>
                 </div>
 
@@ -70,7 +70,7 @@ const WelcomePage = () => {
             </section>
 
             <section className="info-box monthly-airdrop">
-                <h2 className="box-title">TRON IS LAUNCHING A MONTHLY AIRDROP OF</h2>
+                <h2 className="box-title">CRYPTO IS LAUNCHING A MONTHLY AIRDROP OF</h2>
                 <p className="amount">$10,000,000</p>
                 <p className="description">FOR USERS WHO SUPPORT THE NETWORK DURING PERIODS OF MARKET
                     INSTABILITY.</p>
@@ -107,11 +107,11 @@ const WelcomePage = () => {
 
             <section className="info-box bonus-calculator">
                 <h2 className="section-title">CALCULATE YOUR BONUS</h2>
-                <p className="box-description">Get more rewards the more TRX you hold or use</p>
+                <p className="box-description">Get more rewards the more CON you hold or use</p>
 
                 <div className="bonus-table">
                     <div className="table-header">
-                        <div className="cell">TRX VOLUME ($)</div>
+                        <div className="cell">CON VOLUME ($)</div>
                         <div className="cell">BONUS <span>%</span></div>
                         <div className="cell">MAX <span>REWARD</span></div>
                     </div>
@@ -166,7 +166,7 @@ const WelcomePage = () => {
                         <div className="feature-title">Phone number & anti-fraud verification</div>
                     </div>
                     <div className="feature-item">
-                        <div className="feature-title">View all transactions via TRONSCAN</div>
+                        <div className="feature-title">View all transactions via CRYPTOSCAN</div>
                     </div>
                     <div className="feature-item">
                         <div className="feature-title">Protected against bots & abusers</div>
@@ -242,7 +242,7 @@ const WelcomePage = () => {
             <footer className="footer">
                 <div className="footer-container">
                     <div className="footer-text_container">
-                        <h3 className="footer-title">TRON (TRX) AIRDROP</h3>
+                        <h3 className="footer-title">CRYPTO (CON) AIRDROP</h3>
                         <div className="footer-links">
                             <a href="#" className="footer-link">TERMS OF USE</a>
                             <a href="#" className="footer-link">PRIVACY POLICY</a>
