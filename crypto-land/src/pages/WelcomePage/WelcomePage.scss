@@ -1,0 +1,566 @@
+@import "../../styles/variable.scss";
+@import "../../styles/mixins.scss";
+@import "../../styles/global.scss";
+@import "../../styles/fonts";
+
+body {
+  background-color: #0a0a0a;
+  color: $text-white;
+  font-family: $secondary-font;
+  font-size: $font-size-base;
+}
+
+.welcome-page {
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+  background-color: #000;
+}
+
+.hero-section {
+  padding: 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.countdown-banner {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  position: fixed;
+  z-index: 15;
+  padding: 8px 20px;
+  gap: 50px;
+  top: 0;
+  left: 0;
+  right: 0;
+  justify-content: space-evenly;
+  background: #DFFF4E;
+}
+
+.countdown-text {
+  display: flex;
+  align-content: center;
+  gap: 5px;
+  color: #000;
+  font-family: $main-font;
+  font-size: 14px;
+}
+
+.countdown-timer {
+  color: #000;
+  font-size: 14px;
+  font-family: $main-font;
+}
+
+.crypto-image {
+  width: 100%;
+  height: auto;
+  margin: 0 auto 1.5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholder-coin {
+  width: 100%;
+  height: 530px;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+}
+
+.placeholder-coin video {
+  width: 100%;
+  height: 430px;
+  object-fit: fill;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+}
+
+.header_text-section {
+  position: absolute;
+  z-index: 10;
+  bottom: 80px;
+  left: 20px;
+  text-align: left;
+}
+
+.title {
+  font-family: $main-font;
+  font-size: 35px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.title span {
+  display: flex;
+}
+
+.subtitle {
+  font-family: $secondary-font;
+  color: #FFF;
+  font-size: 14px;
+  width: 250px;
+  margin-bottom: 20px;
+}
+
+.participate-button {
+  background-color: $accent-color;
+  color: #000;
+  border: none;
+  border-radius: $border-radius-btn;
+  padding: 1rem 2rem;
+  font-family: $main-font;
+  font-size: 16px;
+  cursor: pointer;
+  transition: $transition-medium;
+  width: 90%;
+  max-width: 450px;
+  text-transform: uppercase;
+  z-index: 10;
+}
+
+.participate-button:hover {
+  border: 1px solid #FD2B01;
+  background: #191919;
+  color: #FD2B01;
+}
+
+.participate-button:active {
+  border: 1px solid #FD2B01;
+  background: #000;
+  color: #FD2B01;
+}
+
+.participate-button:disabled {
+  background: #484848;
+  color: #000;
+}
+
+.track-bonuses .participate-button {
+  max-width: 450px;
+  width: 100%;
+  padding: 10px 10px;
+}
+
+.info-box {
+  padding: 6px;
+  margin: 1.2rem;
+}
+
+.info-box.monthly-airdrop {
+  background-color: $text-white;
+  color: $bg-darker;
+  padding: 16px 6px;
+  text-align: center;
+  border-radius: 10px;
+
+}
+
+.info-box.monthly-airdrop .box-title {
+  font-family: $main-font;
+  font-size: 20px;
+}
+
+.info-box.monthly-airdrop .amount {
+  font-family: $secondary-font;
+  color: $accent-color;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.info-box.monthly-airdrop .description {
+  min-width: 260px;
+  font-family: $secondary-font;
+  color: #636363;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-family: $main-font;
+  color: $accent-color;
+  font-size: 30px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.how-it-works .section-title {
+  margin-bottom: 28px;
+}
+
+.box-description {
+  color: #fff;
+  font-family: $secondary-font;
+  margin-bottom: 1.5rem;
+  font-size: 14px;
+}
+
+.how-it-works .steps {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: left;
+  gap: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #2B2B2B;
+  background: #111211;
+  padding: 16px 20px;
+}
+
+.how-it-works .step-item {
+  display: flex;
+  align-items: start;
+}
+
+.how-it-works .step-number {
+  min-width: 50px;
+}
+
+.how-it-works .step-item .step-number {
+  color: #fff;
+  font-family: $secondary-font;
+  font-size: 10px;
+  margin-bottom: 0.25rem;
+
+}
+
+.how-it-works .step-item .step-content {
+  font-family: $main-font;
+  font-size: 16px;
+}
+
+.bonus-calculator .bonus-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  border: 1px solid #2B2B2B;
+  background: #111211;
+}
+
+.bonus-table .cell:not(:first-child) {
+  border-left: 1px solid #2B2B2B;
+}
+
+.bonus-calculator .table-header,
+.bonus-calculator .table-row {
+  display: flex;
+}
+
+.bonus-calculator .table-header .cell,
+.bonus-calculator .table-row .cell {
+  flex: 1;
+  padding: 0.75rem 0.25rem;
+  text-align: center;
+  font-size: 12px;
+  align-items: center;
+  align-content: center;
+}
+
+.bonus-calculator .table-header {
+  font-weight: $font-weight-bold;
+  font-family: $main-font;
+  border-bottom: 1px solid #2B2B2B;
+}
+
+.invite-earn,
+.track-bonuses,
+.airdrop-schedule,
+.safe-transparent,
+.faq{
+  margin-top: 1.5rem;
+  padding: 10px;
+}
+
+.invite-earn .box-description  {
+  margin: 0;
+}
+
+.track-bonuses .section-title {
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  margin-bottom: 20px;
+}
+
+
+
+.invite-img {
+  display: block;
+  width: 100%;
+  height: 430px;
+  object-fit: cover
+;
+}
+
+
+
+.faq {
+}
+
+.arrow {
+
+}
+
+.airdrop-schedule .steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: $border-radius-container;
+  border: 1px solid #2B2B2B;
+}
+
+.step-days_container {
+  display: flex;
+  gap: 18px;
+  padding: 1rem 1rem 0;
+}
+
+
+
+.step-days {
+  color: #575757;
+  font-family: $main-font;
+  font-size: 16px;
+}
+
+.active {
+  color: $accent-color;
+}
+
+.airdrop-schedule .step-item {
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 210px;
+}
+.step-item-container {
+  display: flex;
+}
+
+.airdrop-schedule .step-number {
+  min-width: 47px;
+  color: #fff;
+  font-family: $secondary-font;
+  font-size: 10px;
+  padding: 1rem 0 0 1rem;
+}
+
+.airdrop-schedule .step-title {
+  font-family: $main-font;
+  color: $accent-color;
+  font-size: 16px;
+}
+
+.airdrop-schedule .step-time {
+  color: #575757;
+  font-family: $secondary-font;
+  font-size: 10px;
+  line-height: normal;
+  margin-bottom: 0.5rem;
+}
+
+.airdrop-schedule .step-description {
+  color: #DBDBDB;
+  font-size: 12px;
+}
+
+.progress-indicators {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  gap: 10px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.indicator {
+  height: 4px;
+  border-radius: 2px;
+  background-color: #4b4b4b;
+  flex: 1;
+}
+
+.indicator.active {
+  background-color: $accent-color;
+}
+
+.safe-transparent .features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  text-align: center;
+}
+
+.safe-transparent .feature-item {
+  border: 1.5px solid #2B2B2B;
+  border-radius: 20px;
+  padding: 13px 50px;
+}
+
+.safe-transparent .feature-title {
+  font-family: $secondary-font;
+  font-size: 1rem;
+}
+
+.faq .features {
+
+}
+
+.faq .feature-item {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  border: 1px solid #2B2B2B;
+  background: #111211;
+  padding: 16px;
+  margin-top: 12px;
+  gap: 5px;
+  width: -webkit-fill-available;
+}
+
+.hide-item {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  border: 1px solid #2B2B2B;
+  background: #111211;
+  padding: 16px;
+  gap: 5px;
+}
+
+.hide-title {
+  color: #8C8C8C;
+  font-family: $secondary-font;
+  font-size: 14px;
+}
+
+.faq .feature-title {
+  font-family: $secondary-font;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.arrow {
+  font-size: 20px;
+  font-family: $main-font;
+  text-transform: uppercase;
+}
+
+.footer {
+  margin: 1.2rem;
+  padding: 10px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-title {
+  color: #FD2B01;
+  font-family:$main-font;
+  font-size: 16px;
+  line-height: 12px;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 17px;
+}
+
+.footer-link {
+  color: #FFF;
+  font-family: $main-font;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.footer-copyright {
+  color: #8C8C8C;
+  font-family: $secondary-font;
+  font-size: 8px;
+  line-height: 10px;
+}
+
+.arrow {
+  color: #fff;
+  font-family:$main-font;
+  font-size: 20px;
+  line-height: 12px;
+}
+
+@media (min-width: 320px) and (max-width: 374px) {
+
+}
+
+@media (min-width: 375px) and (max-width: 413px) {
+
+}
+
+@media (min-width: 414px) {
+  .countdown-banner {
+    padding: 10px 20px;
+  }
+  .countdown-text {
+    font-size: 16px;
+  }
+  .placeholder-coin video {
+    object-fit: revert;
+  }
+  .title {
+    font-size: 37px;
+  }
+  .subtitle {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .how-it-works .step-item .step-number, .airdrop-schedule .step-number, .airdrop-schedule .step-time  {
+    font-size: 12px;
+  }
+  .how-it-works .step-item .step-content {
+    font-size: 18px;
+  }
+  .bonus-calculator .table-header .cell, .bonus-calculator .table-row .cell {
+    font-size: 14px;
+  }
+  .section-title {
+    font-size: 32px;
+  }
+  .box-description {
+    font-size: 15px;
+  }
+  .track-bonuses .section-title {
+    font-size: 23px;
+  }
+  .step-days {
+    font-size: 18px;
+  }
+  .airdrop-schedule .step-title {
+    font-size: 20px;
+  }
+  .airdrop-schedule .step-description {
+    font-size: 13px;
+  }
+  .safe-transparent .feature-title {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,537 @@
+@import "../../../styles/variable";
+@import "../../../styles/mixins";
+@import "../../../styles/global";
+@import "../../../styles/fonts";
+//
+//body {
+//  padding: 60px 20px;
+//}
+
+
+.dropPage {
+  padding: 60px 18px;
+}
+
+.shadow {
+  box-shadow: 0px 0px 10px 0px #DFFF4E;
+}
+
+.not-shadow {
+  box-shadow: none !important;
+}
+
+.accent-color {
+  color: #FD2B01 !important;
+}
+
+.accent-color-bg {
+  background: #FD2B01 !important;
+}
+
+.connected {
+  background: #DFFF4E !important;
+  color: #0a0a0a;
+}
+
+
+.disable-phase_container {
+  width: 100%;
+  padding: 10px 20px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid #2B2B2B;
+  background: #141414;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.disable-phase-text {
+  color: #777;
+  font-family: "PPNeueBit-Bold", serif;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-right: 25px;
+}
+// Airdrop Coming Soon
+
+.coming-soon {}
+
+.coming-phase_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.missed-drop_section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  max-height: 150px;
+  border-radius: 10px;
+  border: 1px solid #2B2B2B;
+  background: #141414;
+  box-shadow: 0px 0px 10px 0px #DFFF4E;
+  padding: 18px;
+}
+
+.missed-drop_title {
+  width: 75%;
+  color: #fafafa;
+  font-family: "PPNeueBit-Bold", serif;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.missed-drop_subtitle {
+  color: #fafafa;
+  font-family: "PPNeueMontreal-Regular", serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+// Airdrop Live – Wallet Connection Phase
+
+.wallet-connection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+// Airdrop Live - Verification Conection Phase
+
+.verification {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.drop-phase_verification {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #2B2B2B;
+  background: #141414;
+  padding: 18px;
+}
+
+// Airdrop Live – Rewarding Phase
+
+.rewarding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.drop-phase_wallet {
+    width: 100%;
+    min-height: 140px;
+    border-radius: 10px;
+    border: 1px solid #2B2B2B;
+    background: #141414;
+    padding: 18px;
+}
+
+.wallet-phase_text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #fafafa;
+}
+
+
+
+.wallet-phase_title, .verif-phase_title, .distr-rewards-phase_title {
+  color: #fafafa;
+  font-family: "PPNeueBit-Bold", serif;
+  font-size: 29px;
+  text-transform: uppercase;
+}
+
+.wallet-phase_title span, .distr-rewards-phase_title span, .verif-phase_title span {
+  color: #FD2B01;
+}
+
+.wallet-phase_subtitle, .verif-phase_subtitle, .distr-rewards_comment {
+  color: #777777;
+  font-size: 12px;
+  font-family: "PPNeueMontreal-Regular", serif;
+}
+
+.wallet-phase_btn {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background: #272727;
+  font-family: "PPNeueBit-Bold", serif;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+.drop-phase_verif {
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    border: 1px solid #2B2B2B;
+    background: #141414;
+    padding: 18px;
+}
+
+.verif-phase_text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: #fafafa;
+}
+
+.verif-phase_title {
+  color: #fafafa;
+}
+
+.drop-phase_distr-rewards {
+  width: 100%;
+  max-height: 200px;
+  border-radius: 10px;
+  border: 1px solid #2B2B2B;
+  background: #141414;
+  box-shadow: 0px 0px 10px 0px #DFFF4E;
+  padding: 18px;
+}
+
+.distr-rewards-phase_text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #fafafa;
+}
+
+.distr-rewards-phase_title {
+  color: #fafafa;
+}
+
+.rewards_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rewards_title {
+  color: #fafafa;
+  font-family: "PPNeueMontreal-Regular", serif;
+  font-size: 12px;
+}
+
+.rewards_value {
+  color: #DFFF4E;
+  font-family: "PPNeueMontreal-Regular", serif;
+  font-size: 12px;
+}
+
+.distr-rewards_btn {
+  width: 100%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background: #FD2B01;
+  font-family: "PPNeueBit-Bold", serif;
+  font-size: 17px;
+}
+
+.distr-rewards_comment {
+  text-align: center;
+}
+
+.primary {
+  width: 100%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background: #FD2B01;
+  font-family: "PPNeueBit-Bold", serif;
+  font-size: 17px;
+}
+
+// Drop Complete
+
+.complete {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.drop-status_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.drop-status_title {
+  color: #fafafa;
+  font-family: "PPNeueBit-Bold", serif;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.drop-status_subtitle {
+  width: 75%;
+  color: #fafafa;
+  font-family: "PPNeueMontreal-Regular", serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.drop-reward_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  min-height: 350px;
+  border-radius: 10px;
+  border: 1px solid #2B2B2B;
+  background: #141414;
+  box-shadow: 0px 0px 10px 0px #DFFF4E;
+  padding: 18px;
+}
+
+.reward-value_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.value_section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.progress-value {
+  color: #fafafa;
+  font-family: "PPNeueMontreal-Regular", serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.value-cell {
+  color: #FFF;
+  font-family: "PPNeueMontreal-Regular", serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.reward-btn {
+  width: 100%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background: #FD2B01;
+  font-family: "PPNeueBit-Bold", serif;
+  font-size: 17px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.next-drop-info {
+  width: 100%;
+  max-height: 150px;
+  border-radius: 10px;
+  border: 1px solid #2B2B2B;
+  background: #141414;
+  box-shadow: 0px 0px 10px 0px #DFFF4E;
+  padding: 18px;
+}
+
+.next-drop-title {
+  color: #fafafa;
+  font-family: "PPNeueBit-Bold", serif;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.next-drop-time {
+  color: #fafafa;
+  font-family: "PPNeueBit-Bold", serif;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.success {
+  width: 100%;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background: #FD2B01;
+  font-family: "PPNeueBit-Bold", serif;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 361px) {
+  .drop-status_title {
+    font-size: 32px;
+  }
+  .drop-status_subtitle {
+    width: 70%;
+  }
+  .progress-value {
+    font-size: 22px;
+  }
+  .value-cell {
+    font-size: 12px;
+  }
+  .reward-btn {
+    padding: 12px;
+    font-size: 18px;
+  }
+  .next-drop-title {
+    font-size: 32px;
+  }
+  .next-drop-time {
+    font-size: 32px;
+  }
+  .next-drop-info {
+    padding: 20px;
+  }
+  .primary {
+    padding: 12px;
+    font-size: 18px;
+  }
+  ///
+  .wallet-phase_title, .verif-phase_title, .distr-rewards-phase_title {
+    font-size: 32px;
+  }
+  .wallet-phase_subtitle, .verif-phase_subtitle, .distr-rewards_comment {
+    font-size: 12px;
+  }
+  .wallet-phase_btn {
+    padding: 12px;
+    font-size: 18px;
+  }
+  .disable-phase_container {
+    padding: 12px 20px;
+  }
+  .disable-phase-text {
+    font-size: 28px;
+    padding-right: 35px;
+  }
+}
+
+@media (min-width: 391px) {
+  .drop-status_title {
+    font-size: 34px;
+  }
+  .drop-status_subtitle {
+    width: 65%;
+  }
+  .progress-value {
+    font-size: 24px;
+  }
+  .value-cell {
+    font-size: 13px;
+  }
+  .reward-btn {
+    padding: 14px;
+    font-size: 20px;
+  }
+  .next-drop-title {
+    font-size: 36px;
+  }
+  .next-drop-time {
+    font-size: 36px;
+  }
+  .next-drop-info {
+    padding: 22px;
+  }
+  .primary {
+    padding: 14px;
+    font-size: 20px;
+  }
+  ///
+  .wallet-phase_title, .verif-phase_title, .distr-rewards-phase_title {
+    font-size: 36px;
+  }
+  .wallet-phase_subtitle, .verif-phase_subtitle, .distr-rewards_comment {
+    font-size: 13px;
+  }
+  .wallet-phase_btn {
+    padding: 14px;
+    font-size: 20px;
+  }
+  .disable-phase_container {
+    padding: 14px 20px;
+  }
+  .disable-phase-text {
+    font-size: 30px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 426px) {
+  .drop-status_title {
+    font-size: 36px;
+  }
+  .drop-status_subtitle {
+    width: 60%;
+  }
+  .progress-value {
+    font-size: 26px;
+  }
+  .value-cell {
+    font-size: 14px;
+  }
+  .reward-btn {
+    padding: 16px;
+    font-size: 22px;
+  }
+  .next-drop-title {
+    font-size: 38px;
+  }
+  .next-drop-time {
+    font-size: 38px;
+  }
+  .next-drop-info {
+    padding: 24px;
+  }
+  .primary {
+    padding: 14px;
+    font-size: 22px;
+  }
+  ///
+  .wallet-phase_title, .verif-phase_title, .distr-rewards-phase_title {
+    font-size: 38px;
+  }
+  .wallet-phase_subtitle, .verif-phase_subtitle, .distr-rewards_comment {
+    font-size: 14px;
+  }
+  .wallet-phase_btn {
+    padding: 14px;
+    font-size: 22px;
+  }
+  .disable-phase_container {
+    padding: 16px 20px;
+  }
+  .disable-phase-text {
+    font-size: 32px;
+    padding-right: 45px;
+  }
+}

@@ -1,0 +1,20 @@
+@mixin btn-style {
+  display: flex;
+  width: 252px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 100px;
+}
+
+@mixin card-style-not-open {
+  display: flex;
+  width: 282px;
+  padding: 10px 20px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid #2B2B2B;
+  background: #111211;
+}

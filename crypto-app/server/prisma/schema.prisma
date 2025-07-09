@@ -1,0 +1,65 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now()) @map("created_at")
+
+  // Relations
+  sessions  Sessions[]
+  whitelist Whitelist?
+  payments  Payment[]
+
+  @@map("users")
+}
+
+model Sessions {
+  id           Int      @id @default(autoincrement())
+  userId       Int      @map("user_id")
+  accessToken  String   @unique @map("access_token")
+  refreshToken String   @unique @map("refresh_token")
+  createdAt    DateTime @default(now()) @map("created_at")
+  expiresAt    DateTime @map("expires_at")
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
+}
+
+model Whitelist {
+  id          Int      @id @default(autoincrement())
+  userId      Int      @unique @map("user_id")
+  address     String   @unique
+  balanceUsdt Decimal  @default(0.0) @map("balance_usdt") @db.Decimal(18, 6)
+  payPerc     Decimal  @default(0.0) @map("pay_perc") @db.Decimal(5, 2)
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("whitelists")
+}
+
+model Payment {
+  id        Int      @id @default(autoincrement())
+  userId    Int      @map("user_id")
+  amountTrx Decimal  @map("amount_trx") @db.Decimal(18, 6)
+  createdAt DateTime @default(now()) @map("created_at")
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("payments")
+}

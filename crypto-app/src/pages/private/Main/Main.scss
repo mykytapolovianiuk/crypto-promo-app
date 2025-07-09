@@ -1,0 +1,586 @@
+@import "../../../styles/variable";
+@import "../../../styles/mixins";
+@import "../../../styles/global";
+@import "../../../styles/fonts";
+
+.mainPage {
+  padding: 50px 20px;
+}
+
+
+.bonus-balance__container {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 10px;
+  position: relative;
+  min-width: 280px;
+  height: 90px;
+  border-radius: 10px;
+  border: 1px solid #2B2B2B;
+  background: #FD2B01;
+  padding: 18px;
+}
+
+.balance-title {
+  color: #FFF;
+  font-family: "PPNeueMontreal-Regular", serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.balance-value {
+  color: #FFF;
+  font-family: "PPNeueBit-Bold", serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.balance-questionMark {
+  position: absolute;
+  top: -2px;
+  right: -3px;
+}
+
+.bonus__section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.balance-questionMark img {
+  width: 25px;
+  fill: #FD2B01;
+}
+
+.bonus-level__container {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  position: relative;
+  min-width: 280px;
+  min-height: 120px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #2B2B2B;
+  background: #111211;
+  margin-bottom: 14px;
+}
+
+.level-title {
+  color: #fff;
+  font-size: 12px;
+  font-family: "PPNeueMontreal-Regular", serif;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.progress-bar__container {
+  position: relative;
+}
+
+.progress-bar__track {
+  width: 100%;
+  height: 12px;
+  background-color: #444;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 3px;
+}
+
+.progress-bar__fill {
+  height: 100%;
+  background-color: #FD2B01;
+  border-radius: 6px;
+  transition: width 0.3s ease-out;
+}
+
+.bonus-text {
+  color: #DFFF4E;
+  opacity: 50%;
+  font-family: "PPNeueMontreal-Regular", serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.bonus-details__button {
+  display: flex;
+  width: 100%;
+  padding: 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 100px;
+  border: 1px solid #2B2B2B;
+  background: #070707;
+  color: #fff;
+  font-size: 17px;
+  font-family: "PPNeueBit-Bold", serif;
+  margin-top: 14px;
+}
+
+.airdrop-section {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.airdrop-card {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  border: 1px solid #333;
+  overflow: hidden;
+
+  .live-badge {
+    background-color: #DFFF4E;
+    padding: 10px 15px;
+    display: flex;
+    align-items: unset;
+    gap: 10px;
+
+    &__text {
+      color: #191919;
+      font-family: "PPNeueBit-Bold", serif;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+
+  .live-indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .airdrop-content {
+    padding: 14px;
+    background: #111211;
+
+    .step-title {
+      color: #fff;
+      font-size: 22px;
+      font-weight: bold;
+      margin: 0 0 12px 0;
+      font-family: "PPNeueBit-Bold", serif;
+      .step-number {
+        color: #FD2B01;
+        font-size: 22px;
+      }
+
+      .step-description {
+        color: #fff;
+        font-size: 22px;
+      }
+    }
+
+    .participation-status {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .participation-label {
+        color: #535353;
+        font-family: "PPNeueMontreal-Regular", serif;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .status-indicator {
+        display: flex;
+        gap: 3px;
+
+        .status-icon {
+          font-size: 12px;
+        }
+
+        .status-text {
+          color: #535353;
+          font-family: "PPNeueMontreal-Regular", serif;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+
+    .view-details-btn {
+      width: 100%;
+      background: transparent;
+      border: 1px solid #555;
+      border-radius: 50px;
+      padding: 16px 24px;
+      color: #fff;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+
+      &:hover {
+        border-color: #777;
+
+        .arrow {
+          transform: translateX(4px);
+        }
+      }
+
+      .arrow {
+        font-size: 24px;
+        transition: transform 0.3s ease;
+      }
+    }
+
+    .airdrop-info {
+      color: #535353;
+      font-family: "PPNeueMontreal-Regular", serif;
+      font-size: 11px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-top: 18px;
+      width: 273px;
+    }
+  }
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 50px;
+  border-top: 1px solid #2B2B2B;
+  background: #111211;
+  padding: 10px 16px;
+}
+
+.profile__section {
+  display: flex;
+  gap: 4px;
+  align-items: start;
+}
+
+.profile-img {
+  width: 24px;
+}
+
+.profile-user__container {
+
+}
+
+.profile-username {
+  color: #fff;
+  font-family: "PPNeueBit-Bold", serif;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.profile-status  {
+  color: #535353;
+  font-family: "PPNeueMontreal-Regular", serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.settings-icon {
+
+}
+
+@media (min-width: 361px) {
+  .bonus-balance__container {
+    min-height: 120px;
+  }
+  .balance-value {
+    font-size: 72px;
+  }
+  .airdrop-card .airdrop-content .participation-status .participation-label,
+  .airdrop-card .airdrop-content .airdrop-info,
+  .airdrop-card .airdrop-content .participation-status .status-indicator .status-text,
+  .bonus-text,
+  .balance-title,
+  .level-title {
+    font-size: 13px;
+  }
+  .bonus-details__button {
+    font-size: 20px;
+    padding: 12px 20px;
+  }
+  .live-badge__text {
+    font-size: 20px !important;
+  }
+
+  .airdrop-card .airdrop-content .step-title .step-number,
+  .airdrop-card .airdrop-content .step-title .step-description,{
+    font-size: 24px;
+  }
+
+  // footer
+
+  .footer__container {
+    min-height: 60px;
+  }
+  .settings-icon, .profile-img {
+    width: 30px;
+  }
+  .profile-username {
+    font-size: 24px;
+  }
+  .profile-status {
+    font-size: 14px;
+  }
+
+}
+
+@media (min-width: 391px) {
+    .bonus-balance__container {
+    min-height: 120px;
+  }
+  .balance-value {
+    font-size: 72px;
+  }
+  .airdrop-card .airdrop-content .participation-status .participation-label,
+  .airdrop-card .airdrop-content .airdrop-info,
+  .airdrop-card .airdrop-content .participation-status .status-indicator .status-text,
+  .bonus-text,
+  .balance-title,
+  .level-title {
+    font-size: 14px;
+  }
+
+  .bonus-details__button {
+    font-size: 22px;
+    padding: 12px 20px;
+  }
+  .live-badge__text {
+    font-size: 22px !important;
+  }
+  .airdrop-card .airdrop-content .step-title .step-number,
+  .airdrop-card .airdrop-content .step-title .step-description,{
+    font-size: 25px;
+  }
+  // footer
+
+  .footer__container {
+    min-height: 65px;
+  }
+  .settings-icon, .profile-img {
+    width: 32px;
+  }
+  .profile-username {
+    font-size: 25px;
+  }
+  .profile-status {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 426px) {
+  .balance-value {
+    font-size: 82px;
+  }
+  .bonus-details__button {
+    font-size: 23px;
+    padding: 14px 22px;
+  }
+  .live-badge__text {
+    font-size: 23px !important;
+  }
+  .airdrop-card .airdrop-content .step-title .step-number,
+  .airdrop-card .airdrop-content .step-title .step-description,{
+    font-size: 26px;
+  }
+  .airdrop-card .airdrop-content .participation-status .participation-label,
+  .airdrop-card .airdrop-content .airdrop-info,
+  .airdrop-card .airdrop-content .participation-status .status-indicator .status-text,
+  .bonus-text,
+  .balance-title,
+  .level-title
+  {
+    font-size: 15px;
+  }
+
+    // footer
+
+  .footer__container {
+    min-height: 70px;
+  }
+  .settings-icon, .profile-img {
+    width: 33px;
+  }
+  .profile-username {
+    font-size: 26px;
+  }
+  .profile-status {
+    font-size: 16px;
+  }
+}
+
+// Додайте ці стилі до вашого Main.scss файлу
+
+// Бургер меню стилі
+.burger-menu__container {
+  position: relative;
+}
+
+.burger-menu__button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.burger-line {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+// Випадаюче меню
+.dropdown-menu {
+  position: absolute;
+  top: -255px; // Меню з'являється над кнопкою
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  min-width: 150px;
+  overflow: hidden;
+  animation: slideUp 0.2s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-item {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #eee;
+  }
+}
+
+.logout-button {
+  font-family: $main-font;
+  color: #fff;
+  font-weight: 600;
+
+  &:hover {
+    background-color: #ffeaea;
+  }
+}
+
+// Оновлені медіа запити з бургер меню
+@media (min-width: 391px) {
+  .burger-menu__button {
+    width: 32px;
+    height: 26px;
+  }
+
+  .menu-item {
+    font-size: 17px;
+    padding: 14px 18px;
+  }
+}
+
+@media (min-width: 426px) {
+  .burger-menu__button {
+    width: 33px;
+    height: 27px;
+  }
+
+  .menu-item {
+    font-size: 18px;
+    padding: 15px 20px;
+  }
+}
+
+// Темна тема (опціонально)
+@media (prefers-color-scheme: dark) {
+  .dropdown-menu {
+    background: #2c2c2c;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .menu-item {
+    color: #fff;
+
+    &:hover {
+      background-color: #3a3a3a;
+    }
+
+    &:not(:last-child) {
+      border-bottom-color: #444;
+    }
+  }
+
+  .logout-button:hover {
+    background-color: #4a2c2c;
+  }
+
+  .burger-line {
+    background-color: #fff;
+  }
+}
